@@ -10,7 +10,7 @@ body {
     background-color: #3498db;
     padding: 10px 0;
     transition: background-color 0.3s;
-    z-index: 1000; /* Ensure the navbar is above other content */
+    z-index: 1000; 
 }
 
 .nav-menu {
