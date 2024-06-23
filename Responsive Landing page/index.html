@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#services">Services</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <section id="home">
+        <h2>Home</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="k.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="gara.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="itachi.jpg" style="width:100%">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>We are passionate about anime and strive to bring the best anime-themed merchandise to our customers. Our Naruto printed T-shirts are made from high-quality fabric, ensuring comfort and durability. Each design is carefully crafted to capture the essence of the beloved Naruto series. Whether you are a casual fan or a hardcore anime enthusiast, our products are designed to meet your expectations.</p>
+        <p>Our printing process uses advanced techniques to ensure vibrant colors and detailed graphics that won't fade over time. We also prioritize ethical manufacturing practices, ensuring that all our products are made in environmentally friendly and socially responsible ways. We believe in providing value and satisfaction to our customers, and our dedicated team works tirelessly to achieve this goal.</p>
+        <p>Anime t-shirts are awesome because they're made with really soft, comfy material and the designs are super cool! The prints are bright and detailed, showing off your favorite anime characters perfectly. Plus, they hold up well wash after wash, so you can rock your favorite anime look for a long time. Whether you're a collector or just love expressing your anime fandom, these shirts are top-notch in quality and style!</p>
+    </section>
+    <section id="services">
+        <h2>Services</h2>
+        <p>We provide the following services:</p>
+        <ul>
+            <li style="color: red; font-weight: bold; font-size: 1.4em;">Printing customized anime T-shirts</li>
+            <img src="naruto1.jpg" alt="Anime T-Shirt Printing">
+            <li style="color: green; font-weight: bold; font-size: 1.4em;">Printing customized anime Shoes</li>
+            <img src="shoe.jpg" alt="Anime Shoes Printing">
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Phone: 818-124-2478</p>
+        <p>Email: <a href="mailto:naruto1@gmail.com">naruto1@gmail.com</a></p>
+    </section>
+</div>
+
+<script src="scripts.js"></script>
+<script>
+    // JavaScript for slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    // JavaScript for changing navbar style on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+</html>
