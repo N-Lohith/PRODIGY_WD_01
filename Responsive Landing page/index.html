@@ -55,7 +55,6 @@
 
 <script src="scripts.js"></script>
 <script>
-    // JavaScript for slideshow
     let slideIndex = 0;
     showSlides();
 
@@ -72,8 +71,6 @@
         slides[slideIndex - 1].style.display = "block";
         setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
-
-    // JavaScript for changing navbar style on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
